@@ -1,0 +1,158 @@
+body {
+background-color: #3498db;
+font-family: 'Harmattan', sans-serif;
+color: #3498db;
+}
+
+.List{
+  margin-top: 10rem!important;
+  margin-left: 1rem!important;
+  margin-right: 1rem!important;
+}
+
+.jumbotron{
+  background-color: white!important;
+  border-radius: 25px!important;
+  max-width: 550px;
+}
+.idea{
+  margin-top: -45px;
+}
+.Emoji{
+    font-size: 20px;
+}
+.modal-body{
+  font-size: 28px;
+}
+input{
+  background-color: #ebebeb!important;
+  border-radius: 25px!important;
+  border-color: #3498db!important;
+  padding-right: 15px!important;
+  font-size: 20px!important;
+  width: 75%!important;
+  display: inline!important;
+
+}
+
+input:focus{
+    outline: none;
+    box-shadow: none !important;
+}
+
+.btn{
+  box-shadow: none !important;
+}
+
+.copyright , .copyright a:hover{
+  text-align:left;
+  font-family: 'Indie Flower', cursive;
+  color:black  !important;
+  text-decoration: none;
+}
+
+a{
+  color: #3498db;
+}
+
+/* Color Switcher  */
+body.red{
+  background: #e74c3c;
+}
+.TheWords-red{
+  color: #e74c3c;
+}
+input.red{
+  border-color: #e74c3c!important;
+}
+a.red{
+  color: #e74c3c!important;
+}
+
+
+
+body.orange{
+  background: #e67e22;
+}
+.TheWords-orange{
+  color: #e67e22;
+}
+input.orange{
+  border-color: #e67e22!important;
+}
+a.orange{
+  color: #e67e22!important;
+}
+
+
+body.yellow {
+  background: #f1c40f;
+}
+.TheWords-yellow{
+  color: #f1c40f;
+}
+input.yellow{
+  border-color: #f1c40f!important;
+}
+a.yellow{
+  color: #f1c40f!important;
+}
+
+body.green {
+  background: #2ecc71;
+}
+.TheWords-green{
+  color: #2ecc71;
+}
+input.green{
+  border-color: #2ecc71!important;
+}
+a.green{
+  color: #2ecc71!important;
+}
+body.blue{
+  background: #3498db;
+}
+.TheWords-blue{
+  color: #3498db;
+}
+input.blue{
+    border-color: #3498db!important;
+
+}
+a.blue{
+  color: #3498db!important;
+}
+.color{
+
+  padding-bottom: 30px;
+}
+#switcher {
+  list-style: none;
+
+}
+#switcher li {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border-radius: 30px;
+  border: 3px solid black;
+}
+
+#redButton{
+  background: #e74c3c;
+}
+#orangeButton{
+  background: #e67e22;
+}
+#yellowButton{
+  background: #f1c40f;
+}
+#greenButton{
+  background: #2ecc71;
+}
+#blueButton{
+  background: #3498db;
+}
+/* Color Switcher  */

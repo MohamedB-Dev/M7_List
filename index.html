@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!-- Twitter: @mo7amd_b  -->
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="copyright" content="Mohamed.B">
+<link rel="shortcut icon" href="Pic\icon.png">
+
+<!-- Start CSS -->
+<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css"
+integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
+<!-- End CSS -->
+
+<!-- Start Font -->
+<link href="https://fonts.googleapis.com/css2?family=Harmattan:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<!-- End Font -->
+
+<title>M7_List</title>
+</head>
+<body>
+
+<!-- Start List -->
+<div class="List">
+  <div class="jumbotron pt-2 pb-4 container text-justify">
+    <div class="color">
+      <ul id="switcher">
+        <li id="redButton"></li>
+        <li id="orangeButton"></li>
+        <li id="yellowButton"></li>
+        <li id="greenButton"></li>
+        <li id="blueButton"></li>
+      </ul>
+    </div>
+    <span class="btn idea Emoji" data-toggle="modal" data-target="#Modal">💡</span>
+    <div class="text-center">
+      <h1>قائمة المهام</h1>
+        <input type="text" class="w-75"  autocomplete="off" placeholder=" ضع مهمة جديدة">
+      <h3 class="myList text-left pl-4 pt-3 text-dark"></h3>
+    </div>
+  </div>
+</div>
+<!-- End List -->
+
+<!-- script Modal -->
+<div class="modal fade text-dark" id="Modal" tabindex="-1" role="dialog" aria-labelledby="Modal" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title mr-1" id="Modal">فائدة القائمة</h2>
+          <div class="close active" data-dismiss="modal" aria-label="Close">
+            <span>❌</span>
+          </div>
+      </div>
+      <div class="modal-body">
+        <p class="h4">تساعدك قائمة المهام على متابعة المشاريع والأعمال والقرارات الهامة <span class="Emoji">📝</span></p>
+      </div>
+      <div class="copyright pr-3">
+         <h4 class="font-weight-bold The-words">👨🏽‍💻 Coded By <a target="_blank" href="https://mohamed.softr.app">Mohamed.B</a></h4>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- script Modal -->
+
+<!-- Start jquery , bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+ crossorigin="anonymous">
+</script>
+<script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js"
+ integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+ crossorigin="anonymous">
+</script>
+<script>
+
+//List
+  function showRemove(){
+    count = $("li").length;
+    if(count > 0 ){
+      $("#remove").show();
+    }
+    else {
+      $("#remove").hide();
+    }
+  }
+    $(document).ready(function(){
+      $("#remove").hide();
+      // زر الاضافه وبعد الاضافه
+      $('input').keypress(function(event) {
+        var value = $('input').val();
+        if(value !== ""  && event.key === "Enter"){
+          var elem = $("<li></li>").text(value);
+          var del = $("<button class='rem btn Emoji'> 🗑️ </button>");
+          $(elem).append(del);
+          $(".myList").append(elem);
+          $("input").val("");
+          showRemove();
+          $(".rem").on("click" , function(){
+            $(this).parent().fadeOut();
+            showRemove();
+          });
+        }
+      });
+    });
+//List
+
+//Color Switcher
+$('#redButton').click(switchRed);
+$('#orangeButton').click(switchOrange);
+$('#yellowButton').click(switchYellow);
+$('#greenButton').click(switchGreen);
+$('#blueButton').click(switchBlue);
+
+function switchRed() {
+  $('body').attr('class', 'red') && $('h1').attr('class', 'TheWords-red') && $('input').attr('class', 'red') && $('a').attr('class', 'red');
+}
+function switchOrange() {
+  $('body').attr('class', 'orange') && $('h1').attr('class', 'TheWords-orange') && $('input').attr('class', 'orange') && $('a').attr('class', 'orange');
+}
+function switchYellow() {
+  $('body').attr('class', 'yellow') && $('h1').attr('class', 'TheWords-yellow') && $('input').attr('class', 'yellow') && $('a').attr('class', 'yellow');
+}
+function switchGreen() {
+  $('body').attr('class', 'green') && $('h1').attr('class', 'TheWords-green') && $('input').attr('class', 'green') && $('a').attr('class', 'green');
+}
+function switchBlue() {
+  $('body').attr('class', 'blue') && $('h1').attr('class', 'TheWords-blue') && $('input').attr('class', 'blue') && $('a').attr('class', 'blue');
+}
+//Color Switcher
+
+</script>
+<!-- End jquery , bootstrap -->
+</body>
+</html>
